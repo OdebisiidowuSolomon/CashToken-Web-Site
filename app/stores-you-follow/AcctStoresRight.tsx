@@ -11,7 +11,7 @@ function AcctStoresRight() {
         <p className="font-medium text-xl text-grayBlack">Stores You Follow</p>
       </div>
       {true ? (
-        <div className="m-5 flex flex-wrap gap-4">
+        <div className="m-5 flex flex-wrap gap-4 justify-center">
           <SingleStore />
           <SingleStore />
           <SingleStore />
@@ -34,7 +34,7 @@ export const SingleStore = () => {
     // <div className="border-2 border-gray-200 rounded-md py-5 flex-[0.5] 804xl:min-w-[400px] 490xl:w-[100%]  ">
     <div className="border-2 border-gray-200 rounded-md py-5 flex-[0.5] 490xl: 1100xl:min-w-[400px]">
       <div className="flex gap-3 justify-between px-5 pb-5 border-b border-dividerBorder">
-        <div className="flex gap-3">
+        <div className="flex-col 1100xl:flex gap-3">
           <div className="w-[70px] h-[70px] border-[3px] p-3 border-light bg-dividerBorder">
             <CustomImageContain image="/images/store-icon.png" />
           </div>

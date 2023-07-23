@@ -3,14 +3,16 @@ import MarketPlaceNavBar from "../marketplace/MarketPlaceNavBar";
 import AcctLeft from "../user-account-home/AcctLeft";
 import { AiOutlineSearch } from "react-icons/ai";
 import { SingleStore } from "../stores-you-follow/AcctStoresRight";
+import Footer from "../components/Footer";
 
 function page() {
   return (
     <div className="bg-siteBG">
       <MarketPlaceNavBar />
-      <div className="px-16 pt-8 pb-16 flex gap-4">
+      <div className="px-3 804xl:px-16 pt-8 pb-16 flex gap-4">
         <OurVendorRight />
       </div>
+      <Footer/>
     </div>
   );
 }
@@ -45,7 +47,7 @@ const OurVendorRight = () => {
 
 const FlexInputSearch = () => {
   return (
-    <div className="flex flex-col 1100xl:flex-row 1100xl:justify-between p-5 mb-3 1100xl:items-center">
+    <div className="flex gap-3 flex-col 1100xl:flex-row 1100xl:justify-between p-5 mb-3 1100xl:items-center">
       <div className="flex items-center mr-7">
         <div className="flex items-center py-2 px-4 border-2 mr-3 border-gray-100 gap-3">
           <AiOutlineSearch size={25} />

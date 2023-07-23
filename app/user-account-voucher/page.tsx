@@ -2,6 +2,7 @@ import React from "react";
 import MarketPlaceNavBar from "../marketplace/MarketPlaceNavBar";
 import AcctLeft from "../user-account-home/AcctLeft";
 import AcctVoucherRight from "./AcctVoucherRight";
+import Footer from "../components/Footer";
 
 function page() {
   return (
@@ -11,6 +12,7 @@ function page() {
         <AcctLeft />
         <AcctVoucherRight />
       </div>
+      <Footer/>
     </div>
   );
 }

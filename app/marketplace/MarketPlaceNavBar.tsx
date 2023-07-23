@@ -70,7 +70,7 @@ const MPNavbarIconItem = ({
 
 export const SecondNavBar = () => {
   return (
-    <div className="px-16 py-4 flex items-center justify-between">
+    <div className="hidden 804xl:flex 804xl:px-16 py-4 items-center justify-between">
       <div className="flex items-center">
         <div className="flex items-center">
           <BsListUl size={25} />

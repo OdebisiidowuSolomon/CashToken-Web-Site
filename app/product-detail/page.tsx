@@ -3,6 +3,7 @@ import MarketPlaceNavBar from "../marketplace/MarketPlaceNavBar";
 import ProdLeftContainer from "./ProdLeftContainer";
 import ProdRightContainer from "./ProdRightContainer";
 import MPCashToken from "../marketplace/MPCashToken";
+import Footer from "../components/Footer";
 
 function page() {
   return (
@@ -17,6 +18,7 @@ function page() {
         <MPCashToken leftText="Recently viewed" />
         <MPCashToken leftText="Customers also Bought" />
       </div>
+      <Footer/>
     </div>
   );
 }

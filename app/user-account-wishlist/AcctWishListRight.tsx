@@ -68,7 +68,7 @@ export const WishListProductItem = ({
             <p className="font-medium text-sm 490xl:text-base text-primary text-right" onClick={onPress}>Rate This Product</p>
         </div>
       ) : (
-        <div className="w-[100%] justify-between flex flex-col 490xl:flex-[0.30]">
+        <div className="w-[100%] justify-between flex flex-row 490xl:flex-col 490xl:flex-[0.30]">
           <Button title="Buy Now" customClass="self-end" />
 
           <div className="flex gap-2 self-end">
