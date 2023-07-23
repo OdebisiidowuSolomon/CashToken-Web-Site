@@ -8,7 +8,7 @@ function AcctOverviewRight() {
       <div className="p-5 border-b-2 border-gray-200">
         <p className="font-medium text-xl text-grayBlack">Account Overview</p>
       </div>
-      <div className="m-4 flex justify-between">
+      <div className="m-4 flex justify-between gap-3 flex-col 804xl:flex-row ">
         <AcctOverviewRightCard>
           <p className="font-medium text-grayBlack mb-3">Justina Anya</p>
           <p className="text-grayBlack text-sm">Justina@cashtoken.ng</p>

@@ -2,20 +2,24 @@
 
 import React, { useState } from "react";
 import { sliderItems } from "./data";
-import { CustomImageContain, CustomImageCover } from "../product-detail/ProdLeftContainer";
+import {
+  CustomImageContain,
+  CustomImageCover,
+} from "../product-detail/ProdLeftContainer";
 
 function page() {
-  const [index, setIndex] = useState(0);
+  // const [index, setIndex] = useState(0);
+  const index = 0;
 
   const handleControl = (b: any) => {
-    console.log(b);
-    if (b === "next" && index > -3) {
-      setIndex((p) => (p -= 1));
-      console.log(b, index);
-    } else if (b == "prev" && index < 0) {
-      setIndex((p) => (p += 1));
-      console.log(b, index);
-    }
+    // console.log(b);
+    // if (b === "next" && index > -3) {
+    //   setIndex((p) => (p -= 1));
+    //   console.log(b, index);
+    // } else if (b == "prev" && index < 0) {
+    //   setIndex((p) => (p += 1));
+    //   console.log(b, index);
+    // }
   };
 
   return (

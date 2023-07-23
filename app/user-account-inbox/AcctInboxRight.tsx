@@ -8,7 +8,7 @@ function AcctInboxRight() {
       <div className="p-5 border-b-2 border-gray-200">
         <p className="font-medium text-xl text-grayBlack">Inbox</p>
       </div>
-      {false ? (
+      {true ? (
         <>
           <AcctInboxRightSingleInbox>
             <div className="mt-4">

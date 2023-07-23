@@ -10,7 +10,7 @@ function AcctWishListRight() {
       <div className="p-5 border-b border-gray-200">
         <p className="font-semibold text-xl text-grayBlack">Wishlist</p>
       </div>
-      {false ? (
+      {true ? (
         <div>
           <WishListProductItem />
         </div>

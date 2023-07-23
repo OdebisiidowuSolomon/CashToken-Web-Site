@@ -7,7 +7,7 @@ function page() {
   return (
     <div className="bg-siteBG">
       <MarketPlaceNavBar />
-      <div className="px-16 pt-8 pb-16 flex gap-4">
+      <div className="flex-col 804xl:flex-row px-3 804xl:px-16 pt-8 pb-16 flex gap-4">
         <AcctLeft />
         <AcctWishListRight />
       </div>

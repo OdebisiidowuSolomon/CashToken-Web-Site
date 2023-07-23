@@ -9,12 +9,14 @@ import { AcctOverviewRightCard } from "../user-account-home/AcctOverviewRight";
 const TabItem = ({
   cancelled,
   _orderDetail,
+  handlePress
 }: {
   cancelled?: boolean;
   _orderDetail?: boolean;
+  handlePress?: () => void;
 }) => {
   return (
-    <div className="flex gap-3 mx-5 py-3 border-b items-centerr border-gray-200">
+    <div className="flex gap-3 mx-5 py-3 border-b items-centerr border-gray-200 flex-col 804xl:flex-row">
       <div className="w-[104px] h-[110px] flex-shrink-0 flex-[0.10]">
         {cancelled || _orderDetail ? (
           <CustomImageContain image="/images/Rectangle-377.png" />
@@ -68,7 +70,7 @@ const TabItem = ({
         )}
       </div>
       <div className="self-start w-[100%] flex-[0.30]">
-        <p className="font-medium text-primary text-right">
+        <p className="font-medium text-primary text-right" onClick={handlePress}>
           {_orderDetail ? "Track Item" : "See Details"}
         </p>
       </div>
@@ -78,13 +80,15 @@ const TabItem = ({
 
 function AcctOrdersRight() {
   const [id, setId] = useState<number>(1);
+  const [showDetails, setShowDetails] = useState<boolean>(false);
 
-  return false ? (
+
+  return !showDetails ? (
     <div className="bg-white rounded-xl flex-[0.75]">
       <div className="p-5 border-b-2 border-gray-200">
         <p className="font-medium text-xl text-grayBlack">Your Orders</p>
       </div>
-      {false ? (
+      {true ? (
         <div>
           <div className="flex gap-5 mx-5 border-b border-gray-200">
             <p
@@ -104,14 +108,14 @@ function AcctOrdersRight() {
               Closed Orders
             </p>
           </div>
-          {id === 1 ? <TabItem /> : <TabItem cancelled />}
+          {id === 1 ? <TabItem handlePress={() => setShowDetails(true)} /> : <TabItem cancelled />}
         </div>
       ) : (
         <NoOrder />
       )}
     </div>
   ) : (
-    <OrderDetail />
+    <OrderDetail handlePress={() => setShowDetails(false)} />
   );
 }
 
@@ -156,12 +160,12 @@ export const NoOrder = ({
   );
 };
 
-const OrderDetail = () => {
+const OrderDetail = ({handlePress}:{handlePress?:() => void}) => {
   return (
     <div className="bg-white rounded-xl flex-[0.75]">
       <div className="p-5 border-b border-gray-200">
         <div className="flex items-center gap-1">
-          <BsArrowLeft size={24} />
+          <BsArrowLeft size={24} onClick={handlePress} />
           <p className="font-medium text-xl text-grayBlack">Orders Details</p>
         </div>
       </div>
@@ -177,7 +181,7 @@ const OrderDetail = () => {
         <TabItem _orderDetail />
       </div>
 
-      <div className="m-4 flex justify-between">
+      <div className="m-4 flex justify-between flex-col 804xl:flex-row gap-5">
         <AcctOverviewRightCard headertext="Payment Information">
           <p className="font-medium text-grayBlack mb-3">Payment Method</p>
           <p className="text-grayBlack text-sm">Cash on Delivery</p>

@@ -11,7 +11,7 @@ function AcctVoucherRight() {
       <div className="p-5 border-b-2 border-gray-200">
         <p className="font-medium text-xl text-grayBlack">Voucher</p>
       </div>
-      {false ? (
+      {true ? (
         <div>
           <div className="flex gap-5 mx-5 border-b border-gray-200">
             <p
@@ -51,7 +51,7 @@ const TabItem = ({ expired }: { expired?: boolean }) => {
   const Item = ({ expired }: { expired?: boolean }) => {
     return (
       <div
-        className={`w-[45%] min-w-[400px] p-4 ${
+        className={`w-[100%] 804xl:w-[45%] 804xl:min-w-[400px] p-4 ${
           expired ? "bg-siteBG" : "bg-light"
         }`}
       >
