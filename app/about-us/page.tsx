@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 function page() {
   return (
     <div>
+      <Navbar path="about-us" />
       <AboutBanner />
       <AboutSecondSection />
       <AboutGoals />

@@ -3,14 +3,14 @@ import React from "react";
 import { BiChevronDown } from "react-icons/bi";
 import COLORS from "../../Constants/COLORS";
 
-function NavLinks() {
+function NavLinks({path}:{path:string}) {
   return (
     <div className="flex">
-      <NavLink link="about-us" title="About Us" />
-      <NavLink link="testimonials" title="Testimonial" />
-      <NavLink title="Services" showArrow />
-      <NavLink link="marketplaces" title="Marketplaces" showArrow />
-      <NavLink title="Login" customStyles={{ fontWeight: "500" }} />
+      <NavLink path={path === 'about-us'} link="about-us" title="About Us" />
+      <NavLink path={path === 'testimonials'} link="testimonials" title="Testimonial" />
+      <NavLink path={path === 'services'} title="Services" showArrow />
+      <NavLink path={path === 'marketplace'} link="marketplaces" title="Marketplaces" showArrow />
+      <NavLink path={path === 'login'} title="Login" link="login" customStyles={{ fontWeight: "500" }} />
       <Button title="Get Started" customStyle={{ marginLeft: 32 }} />
     </div>
   );
@@ -23,16 +23,18 @@ function NavLink({
   customStyles,
   title,
   link,
+  path
 }: {
   showArrow?: boolean;
   customStyles?: React.CSSProperties;
   title: string;
   link?: string;
+  path: boolean;
 }) {
   return (
     <Link
       href={link || "/"}
-      className="text-sm 1079xl:ml-7 ml-3 flex items-center"
+      className={`text-sm 1079xl:ml-7 ml-3 flex items-center ${path && 'text-primary'}`}
       style={{ ...customStyles }}
     >
       {title} {showArrow && <BiChevronDown />}

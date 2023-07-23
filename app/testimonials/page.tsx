@@ -7,10 +7,12 @@ import {
   TestimonialContainer,
 } from "../components/HomeSectionSix";
 import Footer from "../components/Footer";
+import Navbar from "../components/navbar/Navbar";
 
 function page() {
   return (
     <div>
+      <Navbar path="testimonials" />
       <TestimonialBanner />
       <div className="vs:px-5 sm:px-14 md:px-28 my-16">
         <TestimonialContainer />

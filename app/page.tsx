@@ -9,10 +9,12 @@ import HomeSectionSix from "./components/HomeSectionSix";
 import HomeSectionBanner from "./components/HomeSectionBanner";
 import HomeSectionEight from "./components/HomeSectionEight";
 import Footer from "./components/Footer";
+import Navbar from "./components/navbar/Navbar";
 
 export default function Home() {
   return (
     <div className="pb-0">
+      <Navbar path="" />
       <Banner />
       <MarqueeHeader />
       <HomeGroupOne />
