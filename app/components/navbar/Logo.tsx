@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const Logo = () => {
@@ -17,7 +18,7 @@ const Logo = () => {
         onClick={() => router.push("")}
       />
       <div className="ml-1">
-        <p className="text-lg">CashToken Reward</p>
+        <Link href={'/'} className="text-lg">CashToken Reward</Link>
         {/* <p className="text-lg 1079xl:text-lg">CashToken Reward</p> */}
       </div>
     </div>

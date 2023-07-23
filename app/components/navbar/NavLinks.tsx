@@ -5,13 +5,13 @@ import COLORS from "../../Constants/COLORS";
 
 function NavLinks({path}:{path:string}) {
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
       <NavLink path={path === 'about-us'} link="about-us" title="About Us" />
       <NavLink path={path === 'testimonials'} link="testimonials" title="Testimonial" />
       <NavLink path={path === 'services'} title="Services" showArrow />
-      <NavLink path={path === 'marketplace'} link="marketplaces" title="Marketplaces" showArrow />
+      <NavLink path={path === 'marketplace'} link="marketplace" title="Marketplaces" showArrow />
       <NavLink path={path === 'login'} title="Login" link="login" customStyles={{ fontWeight: "500" }} />
-      <Button title="Get Started" customStyle={{ marginLeft: 32 }} />
+      <Button title="Get Started" customClass="m-3 md:m-[32px]" />
     </div>
   );
 }
@@ -34,7 +34,7 @@ function NavLink({
   return (
     <Link
       href={link || "/"}
-      className={`text-sm 1079xl:ml-7 ml-3 flex items-center ${path && 'text-primary'}`}
+      className={`text-sm 1079xl:ml-7 ml-3 md:my-0 my-2 flex items-center ${path && 'text-primary'}`}
       style={{ ...customStyles }}
     >
       {title} {showArrow && <BiChevronDown />}
