@@ -24,7 +24,7 @@ function Navbar({ path }: { path: string }) {
         <div className="hidden md:block">
           <NavLinks path={path} />
         </div>
-        <div onClick={handlePress}>
+        <div onClick={handlePress} className="block md:hidden">
           {!isExpand ? <RxHamburgerMenu size={23} /> : <GrClose size={23} />}
         </div>
       </div>
