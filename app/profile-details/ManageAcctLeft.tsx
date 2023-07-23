@@ -5,7 +5,7 @@ import COLORS from "../Constants/COLORS";
 import { IconType } from "react-icons";
 import { BsPerson } from "react-icons/bs";
 import Link from "next/link";
-import {BiSolidLockAlt } from "react-icons/bi";
+import { BiSolidLockAlt } from "react-icons/bi";
 import { AiOutlineRight } from "react-icons/ai";
 
 function ManageAcctLeft({ activeTab }: { activeTab: string }) {
@@ -16,6 +16,7 @@ function ManageAcctLeft({ activeTab }: { activeTab: string }) {
     path,
     showDownBtn = false,
     onPress,
+    notALink,
   }: {
     Icon: IconType;
     title: string;
@@ -23,9 +24,10 @@ function ManageAcctLeft({ activeTab }: { activeTab: string }) {
     path: string;
     showDownBtn?: boolean;
     onPress?: () => void;
+    notALink?: boolean;
   }) => {
-    return (
-      <Link href={path} onClick={onPress}>
+    return !notALink ? (
+      <Link href={notALink ? "jkj" : path} onClick={onPress}>
         <div
           className={`flex items-center gap-4 mb-3 p-3 ${active && "bg-light"}`}
         >
@@ -36,6 +38,23 @@ function ManageAcctLeft({ activeTab }: { activeTab: string }) {
           )}
         </div>
       </Link>
+    ) : (
+      <div onClick={onPress}>
+          <div
+            className={`flex items-center gap-4 mb-3 p-3 ${
+              active && "bg-light"
+            }`}
+          >
+            <Icon className="text-2xl" color={COLORS.black} />
+            <p className={`text-black`}>{title}</p>
+            {showDownBtn && (
+              <AiOutlineRight
+                className="text-2xl ml-auto"
+                color={COLORS.black}
+              />
+            )}
+          </div>
+      </div>
     );
   };
 
@@ -60,6 +79,7 @@ function ManageAcctLeft({ activeTab }: { activeTab: string }) {
             title="Security Settings"
             active={activeTab === "change-password"}
             path="change-password"
+            notALink
             showDownBtn
             onPress={() => setShowAlt((e) => !e)}
           />
