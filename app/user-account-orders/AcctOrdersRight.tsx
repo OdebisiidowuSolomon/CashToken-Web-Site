@@ -70,7 +70,7 @@ const TabItem = ({
         )}
       </div>
       <div className="self-start w-[100%] flex-[0.30]">
-        <p className="font-medium text-primary text-right" onClick={handlePress}>
+        <p className="font-medium text-primary text-right cursor-pointer" onClick={handlePress}>
           {_orderDetail ? "Track Item" : "See Details"}
         </p>
       </div>
@@ -108,7 +108,7 @@ function AcctOrdersRight() {
               Closed Orders
             </p>
           </div>
-          {id === 1 ? <TabItem handlePress={() => setShowDetails(true)} /> : <TabItem cancelled />}
+          {id === 1 ? <TabItem handlePress={() => setShowDetails(true)} /> : <TabItem handlePress={() => setShowDetails(true)} cancelled />}
         </div>
       ) : (
         <NoOrder />

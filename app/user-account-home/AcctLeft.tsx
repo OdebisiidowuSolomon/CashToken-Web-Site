@@ -18,16 +18,16 @@ function AcctLeft({ activeTab }: { activeTab: string }) {
     Icon,
     title,
     active,
-    path
+    path,
   }: {
     Icon: IconType;
     title: string;
     active?: boolean;
-    path:string;
+    path: string;
   }) => {
     return (
-      <Link href={`/${path}`}>
-        <div className="flex items-center gap-4 mb-4">
+      <Link href={path}>
+        <div className="flex items-center gap-4 mb-5">
           <Icon
             className="text-2xl"
             color={active ? COLORS.primary : COLORS.black}
@@ -69,7 +69,7 @@ function AcctLeft({ activeTab }: { activeTab: string }) {
           Icon={MdCardGiftcard}
           title="CashToken Points"
           active={activeTab === "CashTokenPoints"}
-          path="user-account-Cashtoken"
+          path="user-account-cashtoken"
         />
         <AcctLeftItem
           Icon={BsSuitHeart}
@@ -89,6 +89,11 @@ function AcctLeft({ activeTab }: { activeTab: string }) {
           active={activeTab === "Stores"}
           path="stores-you-follow"
         />
+      </div>
+      <div className="p-4 pt-4 border border-gray-100">
+        <Link href={'profile-details'} className="my-2" >Manage Account</Link>
+        <p className="my-2">Address Book</p>
+        <p className="my-2">Become a Seller</p>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { BiChevronDown } from "react-icons/bi";
 import { BsPerson, BsListUl, BsSuitHeart, BsCart3 } from "react-icons/bs";
 import { GrLocation } from "react-icons/gr";
 import { CustomImageContain } from "../product-detail/ProdLeftContainer";
+import Link from "next/link";
 
 function MarketPlaceNavBar() {
   return (
@@ -29,15 +30,28 @@ function MarketPlaceNavBar() {
               </button>
             </div>
             <div className="1100xl:flex hidden">
-              <MPNavbarIconItem dropdown Icon={BsPerson} title="Account" />
-              <MPNavbarIconItem Icon={BsSuitHeart} title="Wishlist" />
-              <MPNavbarIconItem Icon={BsCart3} title="Cart" />
-              <MPNavbarIconItem Icon={GrLocation} title="USA" />
+              <MPNavbarIconItem
+                path="user-account-home"
+                dropdown
+                Icon={BsPerson}
+                title="Account"
+              />
+              <MPNavbarIconItem
+                path="user-account-wishlist"
+                Icon={BsSuitHeart}
+                title="Wishlist"
+              />
+              <MPNavbarIconItem path="cart" Icon={BsCart3} title="Cart" />
+              <MPNavbarIconItem path="" Icon={GrLocation} title="USA" />
             </div>
             <div className="flex 1100xl:hidden ml-auto items-center gap-3">
               <AiOutlineSearch size={24} />
-              <BsPerson size={24} />
-              <BsCart3 size={24} />
+              <Link href={'Account'}>
+                <BsPerson size={24} />
+              </Link>
+              <Link href={'Cart'}>
+                <BsCart3 size={24} />
+              </Link>
             </div>
           </div>
         </>
@@ -52,16 +66,20 @@ const MPNavbarIconItem = ({
   Icon,
   title,
   dropdown = false,
+  path,
 }: {
   Icon: IconType;
   title: string;
   dropdown?: boolean;
+  path: string;
 }) => {
   return (
     <div className="flex items-center mr-3">
       <Icon size={25} />
       <div className="flex items-center ml-2">
-        <p className="mr-1 font-semibold">{title}</p>
+        <Link href={path} className="mr-1 font-semibold">
+          {title}
+        </Link>
         {dropdown && <BiChevronDown size={25} />}
       </div>
     </div>

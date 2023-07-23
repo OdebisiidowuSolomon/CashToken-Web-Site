@@ -13,6 +13,7 @@ function AcctWishListRight() {
       {true ? (
         <div>
           <WishListProductItem />
+          <WishListProductItem />
         </div>
       ) : (
         <NoOrder
