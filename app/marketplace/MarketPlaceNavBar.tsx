@@ -46,7 +46,7 @@ function MarketPlaceNavBar() {
             </div>
             <div className="flex 1100xl:hidden ml-auto items-center gap-3">
               <AiOutlineSearch size={24} />
-              <Link href={'Account'}>
+              <Link href={'user-account-home'}>
                 <BsPerson size={24} />
               </Link>
               <Link href={'Cart'}>
