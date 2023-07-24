@@ -1,8 +1,12 @@
 import React from "react";
 import { Button } from "../components/navbar/NavLinks";
 import { OutLineButton } from "../product-detail/ProdRightContainer";
+import { useRouter } from "next/navigation";
 
 function CartRightContainer() {
+
+  const router = useRouter()
+
   return (
     <div className="flex-[0.3]">
       <div className="p-6 border-b-2 border-gray-100 bg-white rounded-md">
@@ -28,7 +32,7 @@ function CartRightContainer() {
           <p className="text-grayBlack font-medium">$50,000.00</p>
         </div>
         <div>
-          <Button title="Checkout" customClass="mt-5 w-[100%]"/>
+          <Button title="Checkout" customClass="mt-5 w-[100%]" onPress={() => router.push('/checkout')} />
           <OutLineButton title="Continue Shopping" customClass="my-5 w-[100%]" />
         </div>
       </div>

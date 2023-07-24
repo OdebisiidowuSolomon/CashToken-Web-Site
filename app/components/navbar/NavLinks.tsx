@@ -46,10 +46,12 @@ export function Button({
   title,
   customStyle,
   customClass,
+  onPress
 }: {
   title: string;
   customStyle?: React.CSSProperties;
   customClass?: string;
+  onPress?:() => void
 }) {
   return (
     <button
