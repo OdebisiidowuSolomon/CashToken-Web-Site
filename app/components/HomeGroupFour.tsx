@@ -16,7 +16,7 @@ function HomeGroupFour() {
           <Link
             className="text-base ml-11 vs:text-sm"
             style={{ color: COLORS.primary }}
-            href={"/hello"}
+            href={"/login"}
           >
             Download the SSP Pack
           </Link>
