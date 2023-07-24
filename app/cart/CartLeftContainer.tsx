@@ -4,6 +4,7 @@ import { CustomImageContain } from "../product-detail/ProdLeftContainer";
 import { BsFillPlusSquareFill } from "react-icons/bs";
 import COLORS from "../Constants/COLORS";
 import { FiMinusSquare } from "react-icons/fi";
+import Link from "next/link";
 
 function CartLeftContainer() {
   return (
@@ -31,9 +32,9 @@ const CartLeftContainerItem = ({ image }: { image: string }) => {
         </div>
         <div className="flex-grow">
           <div className="490xl:flex-row flex-col flex 490xl:items-center 490xl:justify-between">
-            <p className="text-black font-medium">
+            <Link href={'product-detail'} className="text-black font-medium">
               Addidas Men&apos;s Sneakers
-            </p>
+            </Link>
             <p className="text-black font-medium">N50,000</p>
           </div>
           <div className="flex items-center justify-between mt-1">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { AiTwotoneStar } from "react-icons/ai";
 
@@ -24,7 +25,7 @@ export default MPMegaDeals;
 
 export const MPMegaDealsCard = () => {
   return (
-    <div className="w-[80%] 490xl:w-[205px]">
+    <Link href={'product-detail'} className="w-[80%] 490xl:w-[205px]">
       <div className="w-[100%] h-[205px] 490xl:w-[205px] rounded-lg relative">
         <img
           src="/images/Rectangle-27.png"
@@ -69,7 +70,7 @@ export const MPMegaDealsCard = () => {
         </div>
         <p className="text-sm text-grayBlack mt-2">Vendor: Kelly’s Kitchen</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
