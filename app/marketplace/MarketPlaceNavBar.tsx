@@ -11,9 +11,9 @@ function MarketPlaceNavBar() {
   return (
     <div className="bg-white">
       <div className="flex px-3 1100xl:px-16 py-4 border-b-2 border-gray-100">
-        <div className="w-[109px] h-[41px] flex-shrink-0">
+        <Link href={'/'} className="w-[109px] h-[41px] flex-shrink-0">
           <CustomImageContain image="/images/CTR-1.png" />
-        </div>
+        </Link>
         <>
           <div className="flex ml-auto items-center">
             <div className="hidden 804xl:flex items-center mr-7">
