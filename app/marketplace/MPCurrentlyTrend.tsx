@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function MPCurrentlyTrend() {
@@ -24,7 +25,7 @@ export default MPCurrentlyTrend;
 
 const MPCurrentlyTrendCard = () => {
   return (
-    <div className="w-[221px] h-[335px] relative">
+    <Link href={'categories'} className="w-[221px] h-[335px] relative">
       <div className="w-[220px] h-[220px] rounded-full bg-light absolute left-0 right-0 top-[10%] z-auto"></div>
       <div className="w-[205px] h-[233px] relative">
         <img
@@ -34,6 +35,6 @@ const MPCurrentlyTrendCard = () => {
         />
       </div>
       <p className="font-medium text-lg text-center mt-7">Men&apos;s Fashion</p>
-    </div>
+    </Link>
   );
 };
